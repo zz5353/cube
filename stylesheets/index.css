@@ -1,0 +1,103 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+h2{
+	text-align: center;
+	margin:150px;
+}
+/*设置动画*/
+#box{
+	width: 150px;
+	height: 150px;
+	font-size: 130px;
+	text-align: center;
+	margin: 80px auto 0 auto;
+	animation-name:myanimation;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count:infinite;
+	animation-duration:7s;
+	transform-style:preserve-3d;
+	transform-origin:75px 75px 0;
+	-webkit-animation-name:myanimation;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-duration:7s;	
+	-webkit-transform-style:preserve-3d;
+	-webkit-transform-origin:75px 75px 0;
+	
+}
+@keyframes myanimation{
+	    0%{-webkit-transform:rotateX(90deg)}
+	    20%{-webkit-transform:rotateY(-180deg)}
+	    40%{-webkit-transform:rotateZ(90deg)}
+	    60%{-webkit-transform:rotateX(90deg)}
+	    80%{-webkit-transform:rotateY(-180deg)}
+	    100%{-webkit-transform:rotateZ(90deg)}
+	}
+@-webkit-keyframes myanimation{
+	    0%{-webkit-transform:rotateX(90deg)}
+	    20%{-webkit-transform:rotateY(-180deg)}
+	    40%{-webkit-transform:rotateZ(90deg)}
+	    60%{-webkit-transform:rotateX(90deg)}
+	    80%{-webkit-transform:rotateY(-180deg)}
+	    100%{-webkit-transform:rotateZ(90deg)}
+	}
+
+#box>div{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+}
+/*设置每个面中小块的样式*/
+#box div div{
+	float: left;
+	width: 48px;
+	height: 48px;
+	border:1px solid #DBDBDB;
+	border-radius: 10px;
+}
+
+
+/*设置每个面所在的空间位置*/
+.first{
+	-webkit-transform:translateZ(75px);	
+}
+.second{
+	-webkit-transform:rotateX(-90deg) translateZ(75px);
+	
+}
+.thrid{	
+	-webkit-transform:rotateX(90deg) translateZ(75px);
+	
+}
+.fourth{
+	-webkit-transform:rotateX(180deg) translateZ(75px);
+}
+.fifth{
+	-webkit-transform:rotateY(-90deg) translateZ(75px);
+}
+.sixth{
+	-webkit-transform:rotateY(90deg) translateZ(75px);
+}
+
+/*设置每个面的颜色*/
+.first div{
+	background-color: #8B3A3A;
+}
+.second div{
+	background-color:#B23AEE;
+}
+.thrid div{
+	background-color:#76EE00;
+}
+.fourth div{
+	background-color: #009ACD;
+}
+.fifth div{
+	background-color: #5D478B;
+}
+.sixth div{
+	background-color: #87CEFA;
+}
